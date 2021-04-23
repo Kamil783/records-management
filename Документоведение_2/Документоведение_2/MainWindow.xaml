@@ -1,0 +1,36 @@
+﻿<Window x:Class="Документоведение_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Документоведение_2"
+        mc:Ignorable="d"
+        Title="Карточки гонщиков" Height="600" Width="1200" Background="#808080" Closing="Window_Closing" ResizeMode="CanMinimize" Icon="icon.ico">
+    <Grid> 
+        <DataGrid x:Name="MainDataGrid" Width="900" Height="400" Style="{StaticResource DataGridStyle}" Margin="0 0 0 100" Padding="2 10 2 0" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single" SelectionUnit="FullRow">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Номер" Width="90"/>
+                <DataGridTextColumn Header="Имя" Width="290"/>
+                <DataGridTextColumn Header="Конструктор" Width="190"/>
+                <DataGridTextColumn Header="Модель" Width="90"/>
+                <!--<DataGridTextColumn Header="Возраст" Width="90"/>-->
+                <!--<DataGridTextColumn Header="Страна рождения" Width="190"/>-->
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="AddButton" Width="200" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left" Margin=" 200 475 0 0" Style="{StaticResource ButtonStyle}" Content="Добавить" Click="AddButton_Click"/>
+        <Button x:Name="DeleteButton" Width="200" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left" Margin=" 500 475 0 0" Style="{StaticResource ButtonStyle}" Content="Удалить" Click="DeleteButton_Click"/>
+        <Button x:Name="DetailButton" Width="200" Height="50" VerticalAlignment="Top" HorizontalAlignment="Left" Margin=" 800 475 0 0" Style="{StaticResource ButtonStyle}" Content="Детализация" Click="DetailButton_Click"/>
+        <Button x:Name="WordButton" Height="38" Width="38" Margin="160 380 0 0" Style="{StaticResource ButtonImageStyle}" VerticalAlignment="Top" HorizontalAlignment="Left" Click="WordButton_Click">
+            <Image Source="word.png" Height="35" Width="35"/>
+        </Button>
+        <Button x:Name="SerializeButton" Height="38" Width="38" Margin="200 380 0 0" Style="{StaticResource ButtonImageStyle}" VerticalAlignment="Top" HorizontalAlignment="Left" Click="SerializeButton_Click">
+            <Image Source="database.png" Height="35" Width="35"/>
+        </Button>
+        <Button x:Name="SignatureButton" Height="38" Width="38" Margin="1000 330 0 0" Style="{StaticResource ButtonImageStyle}" VerticalAlignment="Top" HorizontalAlignment="Left" Click="SignatureButton_Click">
+            <Image Source="signature.png" Height="35" Width="35"/>
+        </Button>
+        <Button x:Name="VerificationButton" Height="38" Width="38" Margin="1000 380 0 0" Style="{StaticResource ButtonImageStyle}" VerticalAlignment="Top" HorizontalAlignment="Left" Click="VerificationButton_Click">
+            <Image Source="verified.png" Height="35" Width="35"/>
+        </Button>
+    </Grid>
+</Window>

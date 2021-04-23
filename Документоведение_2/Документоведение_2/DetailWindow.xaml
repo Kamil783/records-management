@@ -1,0 +1,21 @@
+﻿<Window x:Class="Документоведение_2.DetailWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Документоведение_2"
+        mc:Ignorable="d"
+        Title="Детали карточки" Height="300" Width="1000" Background="#808080">
+    <Grid>
+        <DataGrid x:Name="MainDataGrid" Width="900" Height="200" Style="{StaticResource DataGridStyle}" ItemsSource="{Binding MySource}" Margin="0 0 0 0" Padding="2 10 2 0" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single" SelectionUnit="FullRow">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Номер" Width="90"/>
+                <DataGridTextColumn Header="Имя" Width="190"/>
+                <DataGridTextColumn Header="Конструктор" Width="190"/>
+                <DataGridTextColumn Header="Модель" Width="90"/>
+                <DataGridTextColumn Header="Возраст" Width="90"/>
+                <DataGridTextColumn Header="Страна рождения" Width="190"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

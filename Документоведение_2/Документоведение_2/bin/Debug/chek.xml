@@ -1,0 +1,82 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="Карточки">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="НомерГонщика" type="xs:int" />
+                <xs:element name="ФИОГонщика" type="xs:string" />
+                <xs:element name="Конструктор" type="xs:string" minOccurs="0" />
+                <xs:element name="Болид" type="xs:string" minOccurs="0" />
+                <xs:element name="Возраст" type="xs:int" minOccurs="0" />
+                <xs:element name="СтранаРождения" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Болид">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Болид" type="xs:string" />
+                <xs:element name="СиловаяУстановка" type="xs:string" />
+                <xs:element name="Производитель" type="xs:string" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="Команда">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Конструктор" type="xs:string" />
+                <xs:element name="ГонщикN1" type="xs:string" />
+                <xs:element name="ГонщикN2" type="xs:string" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+      <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//Карточки" />
+        <xs:field xpath="НомерГонщика" />
+        <xs:field xpath="ФИОГонщика" />
+      </xs:unique>
+      <xs:unique name="Constraint2">
+        <xs:selector xpath=".//Карточки" />
+        <xs:field xpath="Болид" />
+      </xs:unique>
+      <xs:unique name="Constraint3">
+        <xs:selector xpath=".//Карточки" />
+        <xs:field xpath="Конструктор" />
+      </xs:unique>
+      <xs:unique name="Болид_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//Болид" />
+        <xs:field xpath="Болид" />
+        <xs:field xpath="СиловаяУстановка" />
+        <xs:field xpath="Производитель" />
+      </xs:unique>
+      <xs:unique name="Команда_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+        <xs:selector xpath=".//Команда" />
+        <xs:field xpath="Конструктор" />
+        <xs:field xpath="ГонщикN1" />
+        <xs:field xpath="ГонщикN2" />
+      </xs:unique>
+      <xs:keyref name="СвязьКоманды" refer="Constraint3">
+        <xs:selector xpath=".//Команда" />
+        <xs:field xpath="Конструктор" />
+      </xs:keyref>
+      <xs:keyref name="СвязьБолида" refer="Constraint2">
+        <xs:selector xpath=".//Болид" />
+        <xs:field xpath="Болид" />
+      </xs:keyref>
+    </xs:element>
+  </xs:schema>
+  <Карточки>
+    <НомерГонщика>16</НомерГонщика>
+    <ФИОГонщика>Шарль</ФИОГонщика>
+    <Конструктор>Феррари</Конструктор>
+    <Болид>SF21</Болид>
+    <Возраст>23</Возраст>
+    <СтранаРождения>Монако</СтранаРождения>
+  </Карточки>
+</NewDataSet>

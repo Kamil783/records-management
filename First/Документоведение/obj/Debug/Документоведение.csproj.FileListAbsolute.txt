@@ -1,6 +1,0 @@
-C:\Users\Камил\source\repos\Документоведение\Документоведение\bin\Debug\Документоведение.exe.config
-C:\Users\Камил\source\repos\Документоведение\Документоведение\bin\Debug\Документоведение.exe
-C:\Users\Камил\source\repos\Документоведение\Документоведение\bin\Debug\Документоведение.pdb
-C:\Users\Камил\source\repos\Документоведение\Документоведение\obj\Debug\Документоведение.csprojAssemblyReference.cache
-C:\Users\Камил\source\repos\Документоведение\Документоведение\obj\Debug\Документоведение.exe
-C:\Users\Камил\source\repos\Документоведение\Документоведение\obj\Debug\Документоведение.pdb
